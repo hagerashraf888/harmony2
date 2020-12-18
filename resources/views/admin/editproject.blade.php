@@ -97,17 +97,25 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label  class="col-sm-12 col-form-label"> Type ID </label>
+                        <label  class="col-sm-12 col-form-label"> Type </label>
                         <div class="col-sm-12">
-                        <input type="text"name="type_id" class="form-control"
-                            placeholder="type the type id of project"  value="">
+                            <select name="type_id" class="form-control">
+                                <option value=""> Choose Type </option>
+                                @foreach($types as $type)
+                                    <option value="{{$type->id}}">{{$type->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label  class="col-sm-12 col-form-label"> Category ID </label>
+                        <label  class="col-sm-12 col-form-label"> Category </label>
                         <div class="col-sm-12">
-                        <input type="text"name="category_id" class="form-control"
-                            placeholder="type the category id of project"  value="">
+                            <select name="category_id" class="form-control">
+                                <option value=""> Choose Category </option>
+                                @foreach($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <input type="submit"  value="save changes" class="mx-auto d-block" id="btn">

@@ -103,8 +103,8 @@
                         <th>image</th>
                         <th>price</th>
                         <th>quantity</th>
-                        <th>type_id</th>
-                        <th>category_id</th>
+                        <th>type</th>
+                        <th>category</th>
                     </tr>
                 @foreach($projects as $project)
                 <tr>
@@ -113,8 +113,8 @@
                     <td><img src="{{ asset($project->image)}}" width="100" height="100" ></td>
                     <td>{{$project->price}}</td>
                     <td>{{$project->quantity}}</td>
-                    <td>{{$project->type_id}}</td>
-                    <td>{{$project->category_id}}</td>
+                    <td>{{$project->type->name}}</td>
+                    <td>{{$project->category->name}}</td>
                     <td>
                         <a href="{{route('delete_project',$project->id)}}" id="dd" class="d-inline-block control-button delete mb-2 m-lg-0">
                             <i class="fas fa-trash-alt"></i> 

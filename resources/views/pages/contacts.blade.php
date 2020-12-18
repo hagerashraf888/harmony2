@@ -5,15 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/slick.css">
-        <link rel="stylesheet" href="../css/slick-theme.css">
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/style.css">
-
-
-        <link rel="icon" href="../images/harmony-logo.jpg">
-        <link rel="stylesheet" href="../fonts/fonts/css/all.css">
+        <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/slick-theme.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+        <link rel="icon" href="{{ asset('images/harmony-logo.jpg')}}">
+        <link rel="stylesheet" href="{{ asset('fonts/fonts/css/all.css')}}">
 
 
     </head>
@@ -22,28 +20,28 @@
         <!-- scroll -->
         <div class="header">
             <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
+                <div class="progress-bar" id="myBar"></div>
             </div>
         </div>
 
         <!-- header -->
         <header>
             <div class="banner">
-                <img src="../images/harmony-banner.jpg">
+                <img src="{{asset('images/harmony-banner.jpg')}}">
                 <div class="text"> HARMONY </div>
             </div>
             <div class="harmony" id="navbar">
                 <div class="logo">
-                    <a href="../index.html">
-                    <img src="../images/harmony-logo.jpg" id="logo">
+                    <a href="{{ route('harmony')}}">
+                    <img src="{{asset('images/harmony-logo.jpg')}}"  id="logo">
                 </a>
                 </div>
                 <nav>
-                    <a href="home.html"> HOME </a>
-                    <a href="about.html"> ABOUT </a>
-                    <a href="service.html"> SERVICE </a>
-                    <a href="projects.html"> PROJECTS </a>
-                    <a href="contacts.html" id="active"> CONTACTS </a>
+                    <a href="{{ route('home')}}"> HOME </a>
+                    <a href="{{ route('about')}}"> ABOUT </a>
+                    <a href="{{ route('service')}}"> SERVICE </a>
+                    <a href="{{ route('projects')}}"> PROJECTS </a>
+                    <a href="#" id="active"> CONTACTS </a>
                 </nav>
             </div>
         </header>
@@ -51,7 +49,7 @@
         <!-- contacts -->
         <div class="contacts">
             <div class="contact1" data-aos="zoom-in">
-                <img src="../images/contacts.jpg">
+                <img src="{{ asset('images/contacts.jpg')}}">
             </div>
 
             <!-- form -->
@@ -82,7 +80,7 @@
         <!-- footer -->
         <footer class="c-foot">
             <div class="foot1-c">
-                <img src="../images/harmony-logo.jpg">
+                <img src="{{ asset('images/harmony-logo.jpg')}}">
             </div>
             <div class="foot2">
                 <h3> Happiness Guarantee </h3>
@@ -116,12 +114,12 @@
         <script>
             AOS.init();
         </script>
-        <script src="../js/jquery-3.5.1.js"></script>
-        <script src="../js/slick.min.js" ></script>
-        <script src="../js/slick.js"></script>
-        <script src="../js/bootstrap.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/script.js"></script>
+        <script src="{{ asset('js/jquery-3.5.1.js')}}"></script>
+        <script src="{{ asset('js/slick.min.js')}}" ></script>
+        <script src="{{ asset('js/slick.js')}}"></script>
+        <script src="{{ asset('js/bootstrap.js')}}"></script>
+        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('js/script.js')}}"></script>
 
     </body>
 </html>

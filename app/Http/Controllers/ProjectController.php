@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Type;
+use App\Models\Category;
 use App\Models\Project;
 
 
@@ -19,8 +21,11 @@ class ProjectController extends Controller
 
     public function add_project_page()
     {
+        $categories = Category::all();
+        $types = Type::all();
         $type = "Project";
-        return view('admin/addproject',compact('type'));
+        return view('admin/addproject',compact('type','categories','types'));
+    
     }
 
     public function add_project(Request $request)
@@ -55,9 +60,11 @@ class ProjectController extends Controller
 
     public function edit_project_page($id)
     {
+        $categories = Category::all();
+        $types = Type::all();
         $type = "Project";
         $project = Project::find($id);
-        return view('admin/editproject',compact('type','project'));
+        return view('admin/editproject',compact('type','project','categories','types'));
     }
 
     public function update_project(Request $request, $id)

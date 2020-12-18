@@ -5,11 +5,9 @@
         <meta charset="UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="css/cart.css">
-        
-        <link rel="stylesheet" href="fonts/fonts/css/all.css"> 
-        <link rel="icon" href="images/harmony-logo.jpg">
+        <link rel="stylesheet" href="{{ asset('css/cart.css')}}">
+        <link rel="stylesheet" href="{{ asset('fonts/fonts/css/all.css')}}"> 
+        <link rel="icon" href="{{ asset('images/harmony-logo.jpg')}}">
     </head>
     <body>
      
@@ -34,7 +32,7 @@
         <div class="layout-inline row">
           
           <div class="col col-pro layout-inline">
-              <img src="images/rooms/01-master-room/02-farmhouse.jpg">
+              <img src="{{ asset('images/rooms/01-master-room/02-farmhouse.jpg')}}">
             <p> Farmhouse Master room </p>
           </div>
           
@@ -59,7 +57,7 @@
         <div class="layout-inline row row-bg2">
   
           <div class="col col-pro layout-inline">
-              <img src="images/rooms/03-living-room/04-parma.jpg">
+              <img src="{{ asset('images/rooms/03-living-room/04-parma.jpg')}}">
             <p> Parma Living room </p>
           </div>
           
@@ -85,7 +83,7 @@
          <div class="layout-inline row">
           
           <div class="col col-pro layout-inline">
-              <img src="images/rooms/05-kitchen/08-calm.jpg">
+              <img src="{{ asset('images/rooms/05-kitchen/08-calm.jpg')}}">
             <p> Calm Kitchen </p>
           </div>
           
@@ -134,6 +132,6 @@
   
   
   
-  <script src="js/cart.js"></script>
+  <script src="{{ asset('js/cart.js')}}"></script>
     </body>
 </html>
